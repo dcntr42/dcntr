@@ -1,0 +1,27 @@
+diff --git a/node_modules/utp-native/binding.js b/node_modules/utp-native/binding.js
+new file mode 100644
+index 0000000..ffd9386
+--- /dev/null
++++ b/node_modules/utp-native/binding.js
+@@ -0,0 +1 @@
++module.exports = require('node-gyp-build')(__dirname)
+diff --git a/node_modules/utp-native/index.js b/node_modules/utp-native/index.js
+index d6a4414..82c1bf9 100644
+--- a/node_modules/utp-native/index.js
++++ b/node_modules/utp-native/index.js
+@@ -1,4 +1,4 @@
+-const binding = require('./lib/binding')
++const binding = require('./binding')
+ const Connection = require('./lib/connection')
+ const util = require('util')
+ const events = require('events')
+diff --git a/node_modules/utp-native/lib/connection.js b/node_modules/utp-native/lib/connection.js
+index 122f0bc..ea2871e 100644
+--- a/node_modules/utp-native/lib/connection.js
++++ b/node_modules/utp-native/lib/connection.js
+@@ -1,4 +1,4 @@
+-const binding = require('./binding')
++const binding = require('../binding')
+ const stream = require('readable-stream')
+ const util = require('util')
+ const unordered = require('unordered-set')

@@ -1,0 +1,13 @@
+diff --git a/node_modules/create-torrent/index.js b/node_modules/create-torrent/index.js
+index 4d70755..b16b088 100644
+--- a/node_modules/create-torrent/index.js
++++ b/node_modules/create-torrent/index.js
+@@ -48,7 +48,7 @@ function createTorrent (input, opts, cb) {
+ 
+   _parseInput(input, opts, (err, files, singleFileTorrent) => {
+     if (err) return cb(err)
+-    opts.singleFileTorrent = singleFileTorrent
++    if (!('singleFileTorrent' in opts)) opts.singleFileTorrent = singleFileTorrent
+     onFiles(files, opts, cb)
+   })
+ }

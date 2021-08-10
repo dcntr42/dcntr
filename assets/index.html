@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>dcntr</title>
+    <meta name="description" content="web decentralization software experiment" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="dcntr" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="http://dcntr42s5hct7pqomwwyevinja43eolslzhhoxbi2qgnjinmyox4bzqb.dcntr.localhost:32687"
+    />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icons/icon.png" />
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <meta name="theme-color" content="#ff0" />
+  </head>
+  <body>
+    <h1>dcntr</h1>
+    <p>web decentralization software experiment</p>
+    <h2>Usage</h2>
+    <p>Before browsing <code>web+dcntr://</code> urls, you need to install and run dcntr.</p>
+    <h3>From binaries</h3>
+    <ul>
+      <li>download app for your platform</li>
+      <li>run</li>
+    </ul>
+    <h3>From source</h3>
+    <pre><code class="language-bash">git clone https://gitlab.com/dcntr/dcntr.git
+npm install
+npm start
+</code></pre>
+    <p>
+      You can also clone/fetch from
+      <a href="http://dcntr42s5hct7pqomwwyevinja43eolslzhhoxbi2qgnjinmyox4bzqb.dcntr.localhost:32687/dcntr.git"
+        >http://dcntr42s5hct7pqomwwyevinja43eolslzhhoxbi2qgnjinmyox4bzqb.dcntr.localhost:32687/dcntr.git</a
+      >, after you have dcntr running. ;)
+    </p>
+    <h2>Development</h2>
+    <h3>Why?</h3>
+    <p>
+      Social media platforms made content more accessible, but with their influence and filtering power, they are
+      diminishing freedom, by promoting cherry picked "truths" and suppressing "wrongthink" speech.
+    </p>
+    <h3>How?</h3>
+    <p>Reinventing the wheel, the lazy way.</p>
+    <p>
+      Let's start with every content bundle being distributed by torrent, with peers and metadata discoverable by DHT,
+      like usual. Content bundles may be superseeded by new ones with a DHT mutable put. The public key used for that
+      may be mapped to a hostname, like Tor Hidden Services. User content will be shared with DHT mutable put using the
+      public key of target as salt.
+    </p>
+    <p>
+      Maybe integrate or replace this with <a href="https://hypercore-protocol.org/">Hypercore</a> or
+      <a href="https://ipfs.io/">IPFS</a> in the future? Sure.
+    </p>
+    <p>Maybe realize that <a href="https://zeronet.io/">ZeroNet</a> is just better? Probably...</p>
+    <h3>What?</h3>
+    <ul class="contains-task-list">
+      <li class="task-list-item"><input type="checkbox" checked disabled /> Publish (static) content</li>
+      <li class="task-list-item"><input type="checkbox" checked disabled /> Browse by content URL</li>
+      <li class="task-list-item"><input type="checkbox" disabled /> Custom error/autoindex pages/templates</li>
+      <li class="task-list-item"><input type="checkbox" disabled /> User ("dynamic") content</li>
+      <li class="task-list-item"><input type="checkbox" disabled /> Node admin/stats</li>
+      <li class="task-list-item"><input type="checkbox" disabled /> Private (e2e) content</li>
+      <li class="task-list-item"><input type="checkbox" disabled /> Domain permissions/transfer</li>
+    </ul>
+    <blockquote>
+      <p>
+        🄯 000000000000000000071f7145692f86d0b513a5b94f1876104f8dd5a334b3f4 dcntr42. ideas are not scarse, copy ==
+        multiply != steal
+      </p>
+    </blockquote>
+  </body>
+</html>

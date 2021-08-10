@@ -1,0 +1,55 @@
+{
+  "name": "dcntr",
+  "description": "web decentralization software experiment",
+  "version": "0.1.0",
+  "license": "MIT",
+  "funding": [
+    {
+      "type": "bitcoin",
+      "url": "http://dcntr42s5hct7pqomwwyevinja43eolslzhhoxbi2qgnjinmyox4bzqb.dcntr.localhost:32687/donate/bitcoin&message=dcntr%2Fnpm"
+    },
+    {
+      "type": "bitcoin",
+      "url": "bitcoin:bc1qdcntr42eux2vqllrf4rtpar0aywagnyqaetpsv&message=dcntr%2Fnpm"
+    }
+  ],
+  "main": "src/agent/index.mjs",
+  "bin": "src/cli.mjs",
+  "scripts": {
+    "start": "node src/cli.mjs",
+    "compile": "ncc --no-cache build src/cli.mjs -o build/",
+    "package": "pkg --config package.json --compress Brotli --targets host build/index.js",
+    "build": "npm run compile && npm run package",
+    "postinstall": "patch-package"
+  },
+  "pkg": {
+    "assets": [
+      "build/prebuilds/**/*.node"
+    ],
+    "outputPath": "dist/"
+  },
+  "dependencies": {
+    "@koa/router": "^10",
+    "@masx200/koa-range": "^1",
+    "appdirsjs": "^1",
+    "base32-decode": "^1",
+    "base32-encode": "^1",
+    "chokidar": "^3",
+    "commander": "^8",
+    "ed25519-supercop": "^2",
+    "glob": "^7",
+    "koa": "^2",
+    "koa-static": "^5",
+    "open": "^8",
+    "systray2": "^2",
+    "webtorrent": "^1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28",
+    "patch-package": "^6",
+    "pkg": "^5"
+  },
+  "optionalDependencies": {
+    "node-hide-console-window": "^2"
+  }
+}
